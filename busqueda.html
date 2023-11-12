@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- Include the Bootstrap Table CSS
+for the table -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>FORMULARIO DE FALTAS Y CONTRAVENCIONES POLICIALES</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/Escudo_EPI.jpg"
+            alt=""
+            width="30"
+            height="24"
+          />
+          Policia Boliviana
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="busqueda.html"
+                >Busqueda Reincidentes</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <br />
+      <br />
+      <table class="table table-success table-striped" id="tablaFormularios">
+        <thead>
+          <tr>
+            <th data-field="Caso">Caso</th>
+            <th data-field="Hora">Hora</th>
+            <th data-field="Fecha">Fecha</th>
+            <th data-field="NombreRfcc">Nombre RF-CC</th>
+            <th data-field="Edad">Edad</th>
+            <th data-field="Sexo">Sexo</th>
+            <th data-field="TipoSanguineo">Tipo Sanguineo</th>
+            <th data-field="Reincidente">Reincidente</th>
+            <th data-field="AntecedenteEnfermedad">Antecedente Enf.</th>
+            <th data-field="EstadoCivil">Estado Civil</th>
+            <th data-field="CantidadHijos"># Hijos</th>
+            <th data-field="Domicilio">Domicilio</th>
+            <th data-field="DescripcionTipoOjos">Tipo Ojos</th>
+            <th data-field="DescripcionTipoNariz">Tipo Nariz</th>
+            <th data-field="DescripcionTipoBoca">Tipo Boca</th>
+            <th data-field="DescripcionTonoPiel">Tono Piel</th>
+            <th data-field="MarcasFaciales">Marcas Faciales</th>
+            <th data-field="Observaciones">Observaciones</th>
+            <th data-field="Conyugue">Conyugue</th>
+            <th data-field="ConyugueEdad">Conyugue Edad</th>
+            <th data-field="ConyugueDomicilio">Conyugue Domicilio</th>
+            <th data-field="PerReferencia">Per. Referencia</th>
+            <th data-field="PerReferenciaEdad">Per. Referencia Edad</th>
+            <th data-field="PerReferenciaDomicilio">
+              Per. Referencia Domicilio
+            </th>
+            <th data-field="GruposAfinesBebedores">Bebedores</th>
+            <th data-field="GruposAfinesInaladores">Inaladores</th>
+            <th data-field="GruposAfinesPandilleros">Pandilleros</th>
+            <th data-field="GruposAfinesOtros">Otros</th>
+            <th data-field="NombreFunPol">Funcionario Policial</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Include the JavaScript file
+      for Bootstrap table -->
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAlr-Hyuck3Vj3ZzXUdgM3CJsHcGCnRLGg",
+        authDomain: "proj1-5aeb5.firebaseapp.com",
+        databaseURL: "https://proj1-5aeb5-default-rtdb.firebaseio.com",
+        projectId: "proj1-5aeb5",
+        storageBucket: "proj1-5aeb5.appspot.com",
+        messagingSenderId: "277263126412",
+        appId: "1:277263126412:web:900b1df5f36218fc2fd0a9",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      import {
+        getDatabase,
+        set,
+        ref,
+        get,
+        onValue,
+        child,
+      } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+
+      const db = getDatabase();
+      const dataTable = [];
+
+      function getting() {
+        const dbr = ref(db, "formularioFaltasContraversiones/");
+
+        onValue(dbr, (snapshot) => {
+          snapshot.forEach((childSnapshot) => {
+            dataTable.push(childSnapshot.val());
+          });
+          console.log(dataTable);
+          $("#tablaFormularios").bootstrapTable({
+            data: dataTable,
+          });
+        });
+      }
+      $(document).ready(function () {
+        // Use the given data to create
+        // the table and display it
+        getting();
+      });
+    </script>
+  </body>
+</html>

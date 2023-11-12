@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>FORMULARIO DE FALTAS Y CONTRAVENCIONES POLICIALES</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/Escudo_EPI.jpg" alt="" width="30" height="24" />
+          Policia Boliviana
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="busqueda.html">Busqueda Reincidentes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <br />
+      <br />
+      <div class="card" style="background-color: rgb(199, 253, 199)">
+        <div class="card-body">
+          <form action="" id="formularioBdpd">
+            <div class="row align-items-start">
+              <div class="col-7">
+                <h2 class="card-title">
+                  FORMULARIO DE FALTAS Y CONTRAVENCIONES POLICIALES
+                </h2>
+                <h1><span class="badge bg-secondary">EPI 6</span></h1>
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <div class="col-1" style="text-align-last: end">
+                    <label for="formCaso" class="col-form-label">Caso:</label
+                    ><br />
+                  </div>
+                  <div class="col-11">
+                    <input type="text" id="formCaso" class="form-control" />
+                  </div>
+                </div>
+                <div class="row align-items-start">
+                  <div class="col">
+                    <label for="formHora" class="col-form-label">Hora:</label>
+                    <input type="time" id="formHora" class="form-control" />
+                  </div>
+                  <div class="col">
+                    <label for="formFecha" class="col-form-label">Fecha:</label>
+                    <input type="date" id="formFecha" class="form-control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row mb-3">
+              <label for="formNombreRfcc" class="col-sm-2 col-form-label"
+                >NOMBRE RF-CC</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="formNombreRfcc" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-3">
+                <div class="row">
+                  <label for="formEdad" class="col-sm-3 col-form-label"
+                    >EDAD</label
+                  >
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="formEdad" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <label for="formSexo" class="col-sm-3 col-form-label"
+                    >SEXO</label
+                  >
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formSexo"
+                        id="formSexoFemenino"
+                        value="femenino"
+                      />
+                      <label class="form-check-label" for="formSexo"
+                        >Femenino</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formSexo"
+                        id="formSexoMasculino"
+                        value="masculino"
+                        checked
+                      />
+                      <label class="form-check-label" for="formSexo"
+                        >Masculino</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <label for="formEdad" class="col-sm-4 col-form-label"
+                    >TIPO SANGUINEO</label
+                  >
+                  <div class="col-sm-8">
+                    <select
+                      id="formTipoSanguineo"
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected value="O+">O+</option>
+                      <option value="O-">O-</option>
+                      <option value="A+">A+</option>
+                      <option value="B+">B+</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                      <option value="INDETERMINADO">INDETERMINADO</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-7">
+                <div class="row">
+                  <label for="formReincidente" class="col-sm-3 col-form-label"
+                    >REINCIDENTE</label
+                  >
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formReincidente"
+                        id="formReincidente2"
+                        value="formReincidente2"
+                        checked
+                      />
+                      <label class="form-check-label" for="formReincidente"
+                        >2da</label
+                      >
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formReincidente"
+                        id="formReincidente3"
+                        value="formReincidente3"
+                      />
+                      <label class="form-check-label" for="formReincidente"
+                        >3ra</label
+                      >
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formReincidente"
+                        id="formReincidente4"
+                        value="formReincidente4"
+                      />
+                      <label class="form-check-label" for="formReincidente"
+                        >4ta o mas veces</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="row">
+                  <label for="formEnfermedad" class="col-sm-4 col-form-label"
+                    >PADECE ALGUNA ENFERMEDAD?</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formEnfermedad"
+                      value="NINGUNA"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <div class="row">
+                  <label for="formEstadoCivil" class="col-sm-4 col-form-label"
+                    >ESTADO CIVIL</label
+                  >
+                  <div class="col-sm-8">
+                    <select
+                      id="formEstadoCivil"
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected value="soltero">Soltero</option>
+                      <option value="casado">Casado</option>
+                      <option value="divorciado">Divorciado</option>
+                      <option value="separación en proceso judicial">
+                        Separación en proceso judicial
+                      </option>
+                      <option value="viudo">Viudo</option>
+                      <option value="concubinato">Concubinato</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <label for="formCantidadHijos" class="col-sm-3 col-form-label"
+                    >CANTIDAD HIJOS</label
+                  >
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formCantidadHijos"
+                        id="formCantidadHijos1"
+                        value="1"
+                      />
+                      <label class="form-check-label" for="formCantidadHijos"
+                        >1</label
+                      >
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formCantidadHijos"
+                        id="formCantidadHijos2"
+                        value="2"
+                      />
+                      <label class="form-check-label" for="formCantidadHijos"
+                        >2</label
+                      >
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formCantidadHijos"
+                        id="formCantidadHijos3"
+                        value="3"
+                      />
+                      <label class="form-check-label" for="formCantidadHijos"
+                        >3</label
+                      >
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="formCantidadHijos"
+                        id="formCantidadHijos4"
+                        value="4"
+                      />
+                      <label class="form-check-label" for="formCantidadHijos"
+                        >4</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="formDomicilio" class="col-sm-2 col-form-label"
+                >DOMICILIO</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="formDomicilio" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <h5>INFORMACION CONYUGUE</h5>
+              <br />
+              <br />
+              <div class="col-8">
+                <div class="row">
+                  <label for="formConyugue" class="col-sm-2 col-form-label"
+                    >NOMBRE</label
+                  >
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formConyugue" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <label for="formConyugueEdad" class="col-sm-2 col-form-label"
+                    >EDAD</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="formConyugueEdad"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="formConyugueDomicilio" class="col-sm-2 col-form-label"
+                >DOMICILIO</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formConyugueDomicilio"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <h5>PERSONA DE REFERENCIA</h5>
+              <br />
+              <br />
+              <div class="col-8">
+                <div class="row">
+                  <label for="formReferencia" class="col-sm-2 col-form-label"
+                    >NOMBRE</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formReferencia"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <label
+                    for="formReferenciaEdad"
+                    class="col-sm-2 col-form-label"
+                    >EDAD</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="formReferenciaEdad"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="formReferenciaDomicilio"
+                class="col-sm-2 col-form-label"
+                >DOMICILIO</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formReferenciaDomicilio"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="row mb-3">
+              <h5>DESCRIPCION FISICA Y FACIAL</h5>
+              <br />
+              <br />
+              <div class="col-6">
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionTipoOjos"
+                    class="col-sm-4 col-form-label"
+                    >TIPO DE OJOS:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionTipoOjos"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionTipoNariz"
+                    class="col-sm-4 col-form-label"
+                    >TIPO DE NARIZ:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionTipoNariz"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionTipoBoca"
+                    class="col-sm-4 col-form-label"
+                    >TIPO DE BOCA:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionTipoBoca"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionTonoPiel"
+                    class="col-sm-4 col-form-label"
+                    >TONO DE PIEL:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionTonoPiel"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <p>FOTOGRAFIA FACIAL</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="formMarcasFaciales" class="col-2 col-form-label"
+                >MARCAS FACIALES DETERMINADAS:</label
+              >
+              <div class="col-10">
+                <textarea
+                  class="form-control"
+                  id="formMarcasFaciales"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="formDescripcionTorax" class="col-2 col-form-label"
+                >TORAX:</label
+              >
+              <div class="col-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formDescripcionTorax"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionBrazoIzq"
+                    class="col-sm-4 col-form-label"
+                    >BRAZO IZQUIERDO:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionBrazoIzq"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionBrazoDer"
+                    class="col-sm-4 col-form-label"
+                    >BRAZO DERECHO:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionBrazoDer"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionPiernaIzq"
+                    class="col-sm-4 col-form-label"
+                    >PIERNA IZQUIERDA:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionPiernaIzq"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label
+                    for="formDescripcionPiernaDer"
+                    class="col-sm-4 col-form-label"
+                    >PIERNA DERECHO:</label
+                  >
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formDescripcionPiernaDer"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-body">
+                    <p>FOTOGRAFIA TORAX</p>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="formObservaciones" class="col-2 col-form-label"
+                >OBSERVACIONES:</label
+              >
+              <div class="col-10">
+                <textarea
+                  class="form-control"
+                  id="formObservaciones"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row mb-3">
+              <h5>GRUPOS AFINES /O CONTINUOS</h5>
+              <br />
+              <div class="col">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="formGruposAfinesBebedores"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="formGruposAfinesBebedores"
+                      >
+                        BEBEDORES EN VIA PUBLICA
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="formGruposAfinesInaladores"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="formGruposAfinesInaladores"
+                      >
+                        INALADORES (CLEFA)
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="formGruposAfinesPandilleros"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="formGruposAfinesPandilleros"
+                      >
+                        PANDILLEROS (GRUPOS)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="formGruposAfinesOtros"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="formGruposAfinesOtros"
+                      >
+                        OTROS
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row mb-3">
+              <label for="formNombreFunPol" class="col-sm-2 col-form-label"
+                >NOMBRE FUN POL</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="formNombreFunPol" />
+              </div>
+            </div>
+            <br />
+            <div class="row mb-3">
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Guardar Formulario
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      window.onload = (event) => {
+        mainLoad();
+      };
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAlr-Hyuck3Vj3ZzXUdgM3CJsHcGCnRLGg",
+        authDomain: "proj1-5aeb5.firebaseapp.com",
+        projectId: "proj1-5aeb5",
+        storageBucket: "proj1-5aeb5.appspot.com",
+        messagingSenderId: "277263126412",
+        appId: "1:277263126412:web:900b1df5f36218fc2fd0a9",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      import {
+        getDatabase,
+        ref,
+        set,
+        child,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+
+      const db = getDatabase();
+
+      function makeid(length) {
+        let result = "";
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+          );
+          counter += 1;
+        }
+        return result;
+      }
+
+      const mainLoad = () => {
+        const mainForm = document.getElementById("formularioBdpd");
+        mainForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          let formCaso = document.getElementById("formCaso").value;
+          let formHora = document.getElementById("formHora").value;
+          let formFecha = document.getElementById("formFecha").value;
+          let formNombreRfcc = document.getElementById("formNombreRfcc").value;
+          let formEdad = document.getElementById("formEdad").value;
+          let formSexoFemenino =
+            document.getElementById("formSexoFemenino").checked;
+          let formSexoMasculino =
+            document.getElementById("formSexoMasculino").checked;
+          let formReincidente2 =
+            document.getElementById("formReincidente2").checked;
+          let formReincidente3 =
+            document.getElementById("formReincidente3").checked;
+          let formReincidente4 =
+            document.getElementById("formReincidente4").checked;
+          let formEstadoCivil =
+            document.getElementById("formEstadoCivil").value;
+          let formTipoSanguineo =
+            document.getElementById("formTipoSanguineo").value;
+          let formCantidadHijos1 =
+            document.getElementById("formCantidadHijos1").checked;
+          let formCantidadHijos2 =
+            document.getElementById("formCantidadHijos2").checked;
+          let formCantidadHijos3 =
+            document.getElementById("formCantidadHijos3").checked;
+          let formCantidadHijos4 =
+            document.getElementById("formCantidadHijos4").checked;
+          let formDomicilio = document.getElementById("formDomicilio").value;
+          let formConyugue = document.getElementById("formConyugue").value;
+          let formConyugueEdad =
+            document.getElementById("formConyugueEdad").value;
+          let formConyugueDomicilio = document.getElementById(
+            "formConyugueDomicilio"
+          ).value;
+          let formReferencia = document.getElementById("formReferencia").value;
+          let formReferenciaEdad =
+            document.getElementById("formReferenciaEdad").value;
+          let formReferenciaDomicilio = document.getElementById(
+            "formReferenciaDomicilio"
+          ).value;
+          let formDescripcionTipoOjos = document.getElementById(
+            "formDescripcionTipoOjos"
+          ).value;
+          let formDescripcionTipoNariz = document.getElementById(
+            "formDescripcionTipoNariz"
+          ).value;
+          let formDescripcionTipoBoca = document.getElementById(
+            "formDescripcionTipoBoca"
+          ).value;
+          let formDescripcionTonoPiel = document.getElementById(
+            "formDescripcionTonoPiel"
+          ).value;
+          let formMarcasFaciales =
+            document.getElementById("formMarcasFaciales").value;
+          let formObservaciones =
+            document.getElementById("formObservaciones").value;
+          let formGruposAfinesBebedores = document.getElementById(
+            "formGruposAfinesBebedores"
+          ).checked;
+          let formGruposAfinesInaladores = document.getElementById(
+            "formGruposAfinesInaladores"
+          ).checked;
+          let formGruposAfinesPandilleros = document.getElementById(
+            "formGruposAfinesPandilleros"
+          ).checked;
+          let formGruposAfinesOtros = document.getElementById(
+            "formGruposAfinesOtros"
+          ).checked;
+          let formNombreFunPol =
+            document.getElementById("formNombreFunPol").value;
+          let formEnfermedad = document.getElementById("formEnfermedad").value;
+          set(ref(db, "formularioFaltasContraversiones/ " + makeid(20)), {
+            Caso: formCaso,
+            Hora: formHora,
+            Fecha: formFecha,
+            NombreRfcc: formNombreRfcc,
+            Edad: formEdad,
+            Sexo: formSexoFemenino ? "Femenino" : "Masculino",
+            Reincidente: formReincidente2
+              ? "2da"
+              : formReincidente3
+              ? "3era"
+              : formReincidente4
+              ? "4ta"
+              : "1era",
+            EstadoCivil: formEstadoCivil,
+            TipoSanguineo: formTipoSanguineo,
+            CantidadHijos: formCantidadHijos1
+              ? 1
+              : formCantidadHijos2
+              ? 2
+              : formCantidadHijos3
+              ? 3
+              : formCantidadHijos4
+              ? 4
+              : 0,
+            Domicilio: formDomicilio,
+            Conyugue: formConyugue,
+            ConyugueEdad: formConyugueEdad,
+            ConyugueDomicilio: formConyugueDomicilio,
+            PerReferencia: formReferencia,
+            PerReferenciaEdad: formReferenciaEdad,
+            PerReferenciaDomicilio: formReferenciaDomicilio,
+            DescripcionTipoOjos: formDescripcionTipoOjos,
+            DescripcionTipoNariz: formDescripcionTipoNariz,
+            DescripcionTipoBoca: formDescripcionTipoBoca,
+            DescripcionTonoPiel: formDescripcionTonoPiel,
+            MarcasFaciales: formMarcasFaciales,
+            Observaciones: formObservaciones,
+            GruposAfinesBebedores: formGruposAfinesBebedores,
+            GruposAfinesInaladores: formGruposAfinesInaladores,
+            GruposAfinesPandilleros: formGruposAfinesPandilleros,
+            GruposAfinesOtros: formGruposAfinesOtros,
+            NombreFunPol: formNombreFunPol,
+            AntecedenteEnfermedad: formEnfermedad,
+          })
+            .then(() => {
+              console.log("data transferred successfully");
+              document.getElementById("formularioBdpd").reset();
+              window.location.replace("busqueda.html");
+            })
+            .catch((err) => {
+              console.log("error", err);
+            });
+        });
+      };
+    </script>
+  </body>
+</html>
