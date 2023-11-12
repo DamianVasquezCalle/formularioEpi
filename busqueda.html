@@ -80,6 +80,7 @@ for the table -->
             <th data-field="Hora">Hora</th>
             <th data-field="Fecha">Fecha</th>
             <th data-field="NombreRfcc">Nombre RF-CC</th>
+            <th data-field="Ubicacion">Ubicacion</th>
             <th data-field="Edad">Edad</th>
             <th data-field="Sexo">Sexo</th>
             <th data-field="TipoSanguineo">Tipo Sanguineo</th>
@@ -103,7 +104,7 @@ for the table -->
               Per. Referencia Domicilio
             </th>
             <th data-field="GruposAfinesBebedores">Bebedores</th>
-            <th data-field="GruposAfinesInaladores">Inaladores</th>
+            <th data-field="GruposAfinesInhaladores">Inhaladores</th>
             <th data-field="GruposAfinesPandilleros">Pandilleros</th>
             <th data-field="GruposAfinesOtros">Otros</th>
             <th data-field="NombreFunPol">Funcionario Policial</th>
@@ -148,7 +149,7 @@ for the table -->
       const dataTable = [];
 
       function getting() {
-        const dbr = ref(db, "formularioFaltasContraversiones/");
+        const dbr = ref(db, "formularioFaltasContraversionesFinal/");
 
         onValue(dbr, (snapshot) => {
           snapshot.forEach((childSnapshot) => {

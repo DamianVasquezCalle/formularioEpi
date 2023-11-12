@@ -96,6 +96,14 @@
               </div>
             </div>
             <div class="row mb-3">
+              <label for="formUbicacionEvento" class="col-sm-2 col-form-label"
+                >UBICACION EVENTO</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="formUbicacionEvento" />
+              </div>
+            </div>
+            <div class="row mb-3">
               <div class="col-3">
                 <div class="row">
                   <label for="formEdad" class="col-sm-3 col-form-label"
@@ -621,13 +629,13 @@
                         class="form-check-input"
                         type="checkbox"
                         value=""
-                        id="formGruposAfinesInaladores"
+                        id="formGruposAfinesInhaladores"
                       />
                       <label
                         class="form-check-label"
-                        for="formGruposAfinesInaladores"
+                        for="formGruposAfinesInhaladores"
                       >
-                        INALADORES (CLEFA)
+                        INHALADORES (CLEFA)
                       </label>
                     </div>
                   </div>
@@ -741,6 +749,7 @@
           let formHora = document.getElementById("formHora").value;
           let formFecha = document.getElementById("formFecha").value;
           let formNombreRfcc = document.getElementById("formNombreRfcc").value;
+          let formUbicacionEvento = document.getElementById("formUbicacionEvento").value;
           let formEdad = document.getElementById("formEdad").value;
           let formSexoFemenino =
             document.getElementById("formSexoFemenino").checked;
@@ -796,8 +805,8 @@
           let formGruposAfinesBebedores = document.getElementById(
             "formGruposAfinesBebedores"
           ).checked;
-          let formGruposAfinesInaladores = document.getElementById(
-            "formGruposAfinesInaladores"
+          let formGruposAfinesInhaladores = document.getElementById(
+            "formGruposAfinesInhaladores"
           ).checked;
           let formGruposAfinesPandilleros = document.getElementById(
             "formGruposAfinesPandilleros"
@@ -808,11 +817,12 @@
           let formNombreFunPol =
             document.getElementById("formNombreFunPol").value;
           let formEnfermedad = document.getElementById("formEnfermedad").value;
-          set(ref(db, "formularioFaltasContraversiones/ " + makeid(20)), {
+          set(ref(db, "formularioFaltasContraversionesFinal/ " + makeid(20)), {
             Caso: formCaso,
             Hora: formHora,
             Fecha: formFecha,
             NombreRfcc: formNombreRfcc,
+            Ubicacion: formUbicacionEvento,
             Edad: formEdad,
             Sexo: formSexoFemenino ? "Femenino" : "Masculino",
             Reincidente: formReincidente2
@@ -847,7 +857,7 @@
             MarcasFaciales: formMarcasFaciales,
             Observaciones: formObservaciones,
             GruposAfinesBebedores: formGruposAfinesBebedores,
-            GruposAfinesInaladores: formGruposAfinesInaladores,
+            GruposAfinesInhaladores: formGruposAfinesInhaladores,
             GruposAfinesPandilleros: formGruposAfinesPandilleros,
             GruposAfinesOtros: formGruposAfinesOtros,
             NombreFunPol: formNombreFunPol,
